@@ -1,0 +1,24 @@
+.hashedTodoNameContainer{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-between;
+    border-radius: 30px;
+    background-color: #e6e1d5;
+    width: 30%;
+    min-width: 100px;
+}
+
+
+.display-all-todos{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+.hashed-todo-container{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
