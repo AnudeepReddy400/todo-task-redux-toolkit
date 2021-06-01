@@ -1,13 +1,16 @@
 import {createSlice,createAsyncThunk} from '@reduxjs/toolkit'
+import axios from 'axios'
 
 export const getPosts  = createAsyncThunk(
-    'posts/getPosts',async()=>{
-        const response = await fetch(`https://apis.ccbp.in/blogs`);
-        if(response.ok){
-          const newList = await response.json();
-          return newList
-        }
+    'posts/getPosts',async(term)=>{
+        const response = await axios.get(`https://api.unsplash.com/search/photos`,{
+            params:{query:term},
+            headers:{
+                Authorization:'Client-ID UJ-HLfZlXwx7FtVbT7Ple_Yggl3UOuxKDxbG_a51REI'
+            }
+        });
         
+        return response.data.results
     }
 
     
